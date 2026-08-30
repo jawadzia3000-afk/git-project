@@ -1,24 +1,25 @@
 #!/bin/bash
 
-<<<<<<< HEAD
-echo "Simple Interest Calculator"
-=======
-# Simple Interest Calculator
+# This script calculates simple interest given principal,
+# annual rate of interest and time period in years.
 
-echo "Simple Interest Calculator"
-echo "-------------------------"
->>>>>>> 6d410e6bac5996f05a9f1aa38f0b46ea518e790f
+# Input:
+# p, principal amount
+# t, time period in years
+# r, annual rate of interest
 
-read -p "Enter the principal amount: " principal
-read -p "Enter the rate of interest: " rate
-read -p "Enter the time period in years: " time
+# Output:
+# simple interest = p*t*r/100
 
-<<<<<<< HEAD
-simple_interest=\
+echo "Enter the principal:"
+read p
 
-echo "Simple Interest: \"
-=======
-simple_interest=$(echo "scale=2; ($principal * $rate * $time) / 100" | bc)
+echo "Enter rate of interest per year:"
+read r
 
-echo "Simple Interest: $simple_interest"
->>>>>>> 6d410e6bac5996f05a9f1aa38f0b46ea518e790f
+echo "Enter time period in years:"
+read t
+
+s=$(echo "scale=2; ($p * $t * $r) / 100" | bc)
+
+echo "The simple interest is: $s"
